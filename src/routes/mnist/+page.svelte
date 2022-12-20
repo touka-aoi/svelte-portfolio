@@ -99,7 +99,7 @@
 
 <!-- ページタイトル -->
 <div class = "my-20 text-center flex gap-8 flex-col" >
-    <p class = "titleText">
+    <p class = "pagetitle">
         MNIST
     </p>
 </div>
