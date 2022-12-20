@@ -2,9 +2,9 @@
 	"name": "my-app",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "vite dev",
+		"dev": "vite --host 0.0.0.0 dev",
 		"build": "vite build",
-		"preview": "vite preview",
+		"preview": "vite --host 0.0.0.0 preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
 	},
