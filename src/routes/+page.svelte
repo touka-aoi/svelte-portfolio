@@ -1,13 +1,30 @@
-<script>
+<script lang="ts">
 	import Counter from './Counter.svelte';
 	import welcome from '$lib/images/svelte-welcome.webp';
 	import welcome_fallback from '$lib/images/svelte-welcome.png';
+	import github from '$lib/images/github.svg';
+	import twitter from '$lib/images/twitter.svg';
+
+	interface outerLink {
+		name:string
+		src:string
+		loc:string
+	}
+
+	const links:outerLink[] = [
+		{name: "github", src: "https://github.com/touka-aoi", loc:twitter},
+		{name: "twitter", src: "https://twitter.com/touka_aoi", loc:github},
+	];
+
 </script>
 
 <svelte:head>
 	<title>Home</title>
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
+
+
+
 
 <section>
 	<h1>
@@ -27,6 +44,19 @@
 
 	<Counter />
 </section>
+
+<!-- 外部リンク -->
+	<section>
+		<div class = "flex gap-8">  
+			{#each links as {name, src, loc}}
+				<div>
+					<a href={src}>
+						<img src={loc} alt={name} width=32px height=32px/>
+					</a>
+				</div>
+			{/each}
+		</div>
+	</section>
 
 <style>
 	section {

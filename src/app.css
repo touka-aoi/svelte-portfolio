@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .titleText {
+    @apply text-2xl font-bold text-violet-800 bg-neutral-100 py-2 rounded-xl
+  }
+}
